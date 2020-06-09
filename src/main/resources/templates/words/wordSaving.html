@@ -1,0 +1,18 @@
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+                      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Saving a word</title>
+</head>
+<body>
+
+    <form th:action="@{/words}" method="post" th:object="${word}">
+        <input type="hidden" name="id" th:field="*{id}">
+        <input type="text" name="name" th:field="*{name}">
+        <button type="submit">Save</button>
+    </form>
+
+<!-- COMMENT-->
+
+</body>
+</html>
